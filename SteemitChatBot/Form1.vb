@@ -194,6 +194,7 @@ Public Class Form1
         Else
             UserAlreadyPostedToday = False
         End If
+        Connection.Close()
         Return UserAlreadyPostedToday
     End Function
 
@@ -208,6 +209,7 @@ Public Class Form1
             Reader.Read()
             Status = Reader("voted")
         End If
+        Connection.Close()
         Return Status
     End Function
 
