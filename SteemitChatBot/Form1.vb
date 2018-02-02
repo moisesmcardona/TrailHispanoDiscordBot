@@ -330,6 +330,7 @@ Public Class Form1
                                             If PostStatus = -1 Then
                                                 If PostTags.Contains("castellano") Then
                                                     If InsertPostToTrailTable(User, PostIdentifier, e.Message.Author.Id) Then
+                                                        AddUserToAlreadyPostedToday(User)
                                                         Dim WitnessVotes As String = GetWitnessVotes(User)
                                                         Dim WitnessMessage As String = ""
                                                         If WitnessVotes.Contains("moisesmcardona") = False Then
